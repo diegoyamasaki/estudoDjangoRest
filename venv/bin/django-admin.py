@@ -1,4 +1,4 @@
-#!/home/diego.yamasaki/Documentos/PESSOAL/EstudoDjangoRest/venv/bin/python
+#!/home/diegoyamasaki/Documentos/estudos/python/estudoDjangoRest/venv/bin/python
 # When the django-admin.py deprecation ends, remove this script.
 import warnings
 
