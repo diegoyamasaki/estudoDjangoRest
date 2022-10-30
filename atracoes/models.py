@@ -1,13 +1,12 @@
 from django.db import models
-from atracoes.models import Atracao
 
 
 # Create your models here.
-class Pontosturistico(models.Model):
+class Atracao(models.Model):
     nome = models.CharField(max_length=150)
     descricao = models.TextField()
-    aprovado = models.BooleanField(default=False)
-    atracoes = models.ManyToManyField(Atracao)
+    horario_funcionamento = models.TextField()
+    idade_minima = models.IntegerField()
 
     def __str__(self):
         return self.nome
