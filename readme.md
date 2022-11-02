@@ -17,6 +17,9 @@ git  https://git.heroku.com/pontos-turisticos-diego.git
 
 adiciona no setting a url no allowed hosts
 
+criar o arquivo Procfile para o content server
+web: gunicorn pontos_turisticos.wsgi --log-file
+
 instalar plugin
 heroku plugins:install heroku-config
 
