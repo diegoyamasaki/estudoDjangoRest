@@ -12,19 +12,23 @@
 criar app no heroku
 heroku apps:create pontos-turisticos-diego
 
-url: https://pontos-turisticos-diego.herokuapp.com/
+url: https://pontos-turisticos-diego.herokuapp.com/ 
+
 git  https://git.heroku.com/pontos-turisticos-diego.git
 
 adiciona no setting a url no allowed hosts
 
-criar o arquivo Procfile para o content server
+criar o arquivo Procfile para o content server\
 web: gunicorn pontos_turisticos.wsgi --log-file
 
 instalar plugin
+
 heroku plugins:install heroku-config
 
-subir as configs para o app
+subir as configs para o app 
+
 heroku config:push --app pontos-turisticos-diego
 
-push do codigo para o heroku:\
+push do codigo para o heroku:
+
 git push heroku main --force
