@@ -13,14 +13,14 @@ class PontosTuristicosViewSet(ModelViewSet):
     def get_queryset(self):
         return Pontosturistico.objects.filter(aprovado=True)
 
-    # def create(self, request, *args, **kwargs):
-    #     pass
+    def create(self, request, *args, **kwargs):
+        return super(PontosTuristicosViewSet, self).create(request, *args, **kwargs)
 
-    # def list(self, request, *args, **kwargs):
-    #     ...
+    def list(self, request, *args, **kwargs):
+        return super(PontosTuristicosViewSet, self).list(request, *args, **kwargs)
 
-    # def destroy(self, request, *args, **kwargs):
-    #     pass
+    def destroy(self, request, *args, **kwargs):
+        return super(PontosTuristicosViewSet, self).destroy(request, *args, **kwargs)
 
     @action(methods=['get'], detail=True)
     def denunciar(self, request, pk=None):
