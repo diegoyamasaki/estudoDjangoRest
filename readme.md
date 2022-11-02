@@ -25,3 +25,6 @@ heroku plugins:install heroku-config
 
 subir as configs para o app
 heroku config:push --app pontos-turisticos-diego
+
+push do codigo para o heroku:\
+git push heroku main --force
