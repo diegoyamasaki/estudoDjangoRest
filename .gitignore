@@ -1,2 +1,5 @@
 venv/
 senha
+*.sqlite3
+*.pyc
+.idea
