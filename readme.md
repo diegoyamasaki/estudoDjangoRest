@@ -20,3 +20,5 @@ adiciona no setting a url no allowed hosts
 instalar plugin
 heroku plugins:install heroku-config
 
+subir as configs para o app
+heroku config:push --app pontos-turisticos-diego
