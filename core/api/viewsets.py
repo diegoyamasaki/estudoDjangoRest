@@ -1,14 +1,22 @@
+from rest_framework import filters
 from rest_framework.decorators import action
 from rest_framework.response import Response
 from rest_framework.viewsets import ModelViewSet
 from core.models import Pontosturistico
 from core.api.serializers import PontoTuristicoSerializer
+from rest_framework.permissions import IsAuthenticated
+from rest_framework.authentication import TokenAuthentication
 
 
 class PontosTuristicosViewSet(ModelViewSet):
 
     #queryset = Pontosturistico.objects.all()
+    permission_classes = (IsAuthenticated,)
+    authentication_classes = (TokenAuthentication,)
     serializer_class = PontoTuristicoSerializer
+    filter_backends = [filters.SearchFilter]
+    search_fields = ['nome', 'descricao', 'endereco__linha1']
+    lookup_field = 'nome'
 
     def get_queryset(self):
         id = self.request.query_params.get('id', None)
